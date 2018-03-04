@@ -3,7 +3,10 @@
 {% block content %}
 	<main class="hero-section">
 		<div class="container">
-			<h1>Home</h1>
+			<h1>Welcome to the Home page!</h1>
+		</div>
+        <div class="container">
+			<button onclick="location.href = '{{ url_for('logout') }}';">logout</button>
 		</div>
 	</main>
 {% endblock %}

@@ -3,6 +3,15 @@ h1 {
     text-align: center;
 }
 
+p {
+    color: white;
+    align: center;
+    width: 15em;
+    word-wrap: break-word;
+    font-size:20px;
+}
+
+
 body {
     background-color: lightgreen;
 }
