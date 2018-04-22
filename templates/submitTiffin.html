@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{%block content%}
+    <div align="center">
+        <p >
+            Congratulations ! You have just booked your Tiffin. Someone from our team will get in touch with
+            you shortly regarding payment for your Tiffin.
+        </p>
+    </div>
+    <div align="center" >
+            <button  onclick="location.href = '{{ url_for('logout') }}';">logout</button>
+    </div>
+    <div align="center">
+            <button  onclick="location.href = '{{ url_for('home') }}';">Back to Home</button>
+    </div>
+
+{% endblock %}

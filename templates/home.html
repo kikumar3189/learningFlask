@@ -1,12 +1,44 @@
 {% extends "layout.html" %}
 
 {% block content %}
-	<main class="hero-section">
-		<div class="container">
-			<h1>Welcome to the Home page!</h1>
+
+		<div align="center">
+			<h1>Welcome {{ username }}</h1>
 		</div>
-        <div class="container">
-			<button onclick="location.href = '{{ url_for('logout') }}';">logout</button>
+        <div class="top_right">
+            <button  onclick="location.href = '{{ url_for('logout') }}';">logout</button>
+        </div>
+        <div align="center">
+			<h2>Please see below your current tiffin details: </h2>
 		</div>
-	</main>
+        <div align="center">
+            <table border="1" cellpadding="5" cellspacing="5">
+                {% if tiffins|length < 1 %}
+                    <h3>No active tiffins present.</h3>
+                {% else %}
+                    <tr>
+                    {% for attribute in cols %}
+                        <td style="font-weight:bold">{{ attribute }}</td>
+                    {% endfor %}
+                    </tr>
+                    {% for row in tiffins %}
+                        <tr>
+                        {% for d in row %}
+                            <td>{{ d }}</td>
+                        {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </table>
+                {% endif %}
+        </div>
+        <br> </br>
+        <div align="center">
+            <button onclick="location.href = '{{ url_for('order_new_tiffin') }}';">Order New Tiffin</button>
+        </div>
+        <div align="center">
+            <button onclick="location.href = '{{ url_for('cancel_tiffin') }}';">Cancel Tiffin</button>
+        </div>
+
+
+
 {% endblock %}
