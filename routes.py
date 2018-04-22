@@ -12,11 +12,6 @@ def index():
 
 app.secret_key = "development-key"
 
-
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
 @app.route("/signup", methods = ['GET','POST'])
 def signup():
     if 'email' in session:
@@ -82,11 +77,9 @@ def order_new_tiffin():
             userTiffin = UserTiffin(session['email'])
             activeTiffinPresent = userTiffin.check_active_tiffin(form.timing.data)
             if activeTiffinPresent:
-                #To Do : Display a message that an active Tiffin is already present for this timing and clear form data.
                 print('Active tiffin already present for this timing')
                 return render_template("newTiffin.html", form = form)
             if len(form.newAddressName.data) > 0:
-                # userAddress = UserAddress(session['email'])
                 userAdd.add_new_delivery_address(form.newAddressName.data, form.addressLine1.data, form.addressLine2.data, form.city.data, form.pincode.data)
                 userTiffin.add_new_tiffin(form.timing.data, form.tiffinType.data, form.size.data, form.newAddressName.data)
                 return redirect(url_for('submit_tiffin'))

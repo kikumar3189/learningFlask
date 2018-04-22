@@ -4,6 +4,9 @@
 	<main class="container signup-section">
 		<div class="section-content">
 			<h2>New Tiffin</h2>
+			<div class="top_right">
+            <button  onclick="location.href = '{{ url_for('logout') }}';">logout</button>
+            </div>
 
 			<form method="POST" action="/orderNewTiffin">
 				{{form.hidden_tag()}}
