@@ -69,7 +69,10 @@ class UserHandler:
         'Returns the details of existing user with email'
         query = "select firstname, lastname, password from users where email = ? "
         data = self._dbObj.execute_select_query(query, (email,))
-        return data[0]
+        if len(data) > 0:
+            return data[0]
+        else:
+            return None
 
 class UserTiffin:
 

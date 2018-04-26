@@ -5,8 +5,13 @@
 
 	</head>
 
-	<body background="{{ url_for('static', filename='img//green_bamboo_wallpaper_tileable.jpg') }}">
+	<body >
 		<h1>MoM's Kitchen</h1>
 	    <div id="content">{% block content %}{% endblock %}</div>
+        <br>
+        <br>
+		<div align="center">
+    	    <img src="{{ url_for('static', filename='img//Fresh_Vegetables.jpg') }}"  style="width:500px" >
+	    </div>
 	</body>
 </html>

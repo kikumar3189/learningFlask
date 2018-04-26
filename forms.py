@@ -12,7 +12,7 @@ class SignupForm(Form):
 
 
 class LoginForm(Form):
-    email = StringField('Email',validators=[DataRequired('Please enter your email address'),Email('Please enter a valid email address')])
+    email = StringField('Email', validators=[DataRequired('Please enter your email address'),Email('Please enter a valid email address')])
     password = PasswordField('Password',validators=[DataRequired('Password is required'),Length(min=6,message='Password must be atleast 6 characters long')])
     submit = SubmitField('Sign In')
     
