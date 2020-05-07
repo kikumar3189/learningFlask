@@ -1,6 +1,6 @@
 Project Title
 Learning Flask :  This is a practice project to learn Python Flask framework. The app created in this project represents an Online Tiffin
-booking system. Core intention behind creating this project is to learn the fundamentals of web development and to see the GET/POST requests in action. There has been a very little focus on the UI of the app as that was not the core intention for developing this app. This is still work in progress.
+booking system. Core intention behind creating this project is to learn the fundamentals of web development and to see the GET/POST requests in action. There has been a very little focus on the UI of the app as that was not the core intention for developing this app. 
 The app has been developed using Git as version control and has been deployed on Cloud platform Heroku. 
 URL to App : https://warm-citadel-23406.herokuapp.com/ 
 The work for creating Gherkin test cases and deployment using Jenkins is yet to be done. 
